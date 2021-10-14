@@ -218,6 +218,7 @@ public class MontaditoDAO {
 				MontaditoVO montadito = new MontaditoVO(res.getInt("idMontaditos"), res.getString("nombre"),
 						res.getInt("precio"), res.getString("tamanio"), res.getShort("premium"));
 				// Añadimos
+
 				montaditos.add(montadito);
 
 			}

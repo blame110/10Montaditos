@@ -1,26 +1,27 @@
 package model;
 
-public class MontaditoVO {
+import java.io.Serializable;
+
+public class MontaditoVO implements Serializable {
 
 	private int idMontadito;
-	private  String nombre;
+	private String nombre;
 	private int precio;
 	private String tamano;
 	private short premium;
-	
-	public static int SI_PREMIUM =1;
-	public static int NO_PREMIUM =0;
-	
-	
-	public MontaditoVO()
-	{
-		this.idMontadito=0;
-		this.nombre ="";
-		this.precio=0;
-		this.tamano="";
-		this.premium=0;
+
+	public static int SI_PREMIUM = 1;
+	public static int NO_PREMIUM = 0;
+
+	public MontaditoVO() {
+		super();
+		this.idMontadito = 0;
+		this.nombre = "";
+		this.precio = 0;
+		this.tamano = "";
+		this.premium = 0;
 	}
-	
+
 	public MontaditoVO(int idMontadito, String nombre, int precio, String tamano, short premium) {
 		super();
 		this.idMontadito = idMontadito;
@@ -30,8 +31,7 @@ public class MontaditoVO {
 		this.premium = premium;
 	}
 
-	public int getIdMontadito()
-	{
+	public int getIdMontadito() {
 		return idMontadito;
 	}
 
@@ -70,6 +70,11 @@ public class MontaditoVO {
 	public void setIdMontadito(int idMontadito) {
 		this.idMontadito = idMontadito;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "MontaditoVO [idMontadito=" + idMontadito + ", nombre=" + nombre + ", precio=" + precio + ", tamano="
+				+ tamano + ", premium=" + premium + "]";
+	}
+
 }
